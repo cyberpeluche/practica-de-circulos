@@ -12,6 +12,7 @@ footer {
     text-align: center;
     padding: 20px;
     width: 100%;
+    margin-bottom: 0;
 }
 .container {
     display: flex;
@@ -20,15 +21,10 @@ footer {
 }
 .logo img {
     top: 50px;
+    border-radius: 50%;
 }
 header {
     top: 0px;
-}
-footer {
-    margin-bottom: 0;
-}
-.logo img {
-    border-radius: 50%;
 }
 .circulos-container {
     display: flex;
@@ -58,12 +54,54 @@ footer {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    
 }
 .circle:hover {
     transform: scale(1.2);
     border-color: fuchsia; 
     box-shadow: 0px 20px 40px rgb(250, 5, 164, 1);
+}
+.rico-flotante {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: azure;
+    border: 2px solid red;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(300px);
+    transition: 
+        opacity 0.3s ease,
+        visibity 0.3s ease,
+        transform 0.3s ease;
+    z-index: 10;
+}
+.rico-flotante img {
+    max-width: 250px;
+    display: block;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+
+}
+.circle:hover .rico-flotante {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+.circulo3:hover .rico-flotante {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+.circulo1 {
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.8);
 }
 
 
